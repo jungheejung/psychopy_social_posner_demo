@@ -139,7 +139,7 @@ for ind, cond in enumerate(condition_list):
 #                df.loc[index, 'key_rt'] = ptbKey[0][1]
 #                df.loc[ixndex, 'key_conversion'] = key_map[ptbKey[0][0]]
         kbClock.reset()
-    file_savename = os.sep.join([main_dir, 'data', 'sub-01', 'sub-01_task-' + cond + '_beh.csv'])
+    file_savename = os.sep.join([main_dir, 'data', 'sub-01', 'sub-01_task-' + cond + '_ver-01_block-01_beh.csv'])
     df.to_csv(file_savename)
 
     # thank you screen
