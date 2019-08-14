@@ -8,8 +8,8 @@ import pandas as pd
 # parameters ___________________________________________________________________
 
 # 1) directory
-#main_dir = "/Users/mristimulus/Desktop/SpecInt/SI.01_git"
-main_dir = "/Users/h/Dropbox/Projects/SI.01_git"
+main_dir = "/Users/mristimulus/Desktop/SpecInt/SI.01_git"
+#main_dir = "/Users/h/Dropbox/Projects/SI.01_git"
 stimuli_dir = main_dir + os.sep + "stimuli"
 
 # 2) color
@@ -25,10 +25,10 @@ background_color = GREY
 disp = visual.Window(pos=(0, 0), color=background_color, colorSpace="rgb255", units="norm", fullscr=True)
 # , fullscr=True
 # 4) fixation
-fixation_cross = visual.TextStim(win = disp, text = '+', color = [-1,-1,-1], height = 0.3)
+fixation_cross = visual.TextStim(win = disp, text = '+', color = [-1,-1,-1], height = 0.2)
 # 6) target
 target = visual.Circle(win = disp, units = 'pix', radius = 15, edges=128, lineColor=[-1,-1,-1], lineColorSpace='rgb', fillColor=[-1,-1,-1], fillColorSpace='rgb')
-target_positions = {'left': (int(disp.size[0] * -0.15), 0), 'right':( int(disp.size[0] * 0.15), 0)}
+target_positions = {'left': (int(disp.size[0] * -0.20), 0), 'right':( int(disp.size[0] * 0.20), 0)}
 # 7) keyboard mapp
 key_map = {'1': 'left', '2': 'right'}
 
@@ -128,23 +128,18 @@ for ind, cond in enumerate(condition_list):
                 df.loc[index, 'keypress'] = keypresstime
                 df.loc[index, 'key_rt'] = rt
                 df.loc[index, 'key_conversion'] = key_map[keys[0]]
-#            ptbKey = kb.getKeys(keyList = ['f', 'j'], waitRelease = False, clear = True)
-#            if ptbKey:
-#                print(ptbKey[0][0], ptbKey[0][1])
-#                df.loc[index, 'raw_key_response'] = ptbKey[0][0]
-#                df.loc[index, 'key_rt'] = ptbKey[0][1]
-#                df.loc[ixndex, 'key_conversion'] = key_map[ptbKey[0][0]]
+
         kbClock.reset()
     file_savename = os.sep.join([main_dir, 'data', 'sub-02', 'sub-02_task-' + cond + '_ver-02_block-02_beh.csv'])
     df.to_csv(file_savename)
 
     # thank you screen
-    while event.waitKeys(keyList = 'e'):
-        message = visual.TextStim(disp, text='Thank you. Please wait for the next game to start')
-        message.draw()  # Automatically draw every frame
-        disp.flip()
+    message = visual.TextStim(disp, text='Thank you. Please wait for the next game to start')
+    message.draw()  # Automatically draw every frame
+    disp.flip()
+    event.waitKeys(keyList = 'e')
 
 
-message = visual.TextStim(disp, text='This is the end of session1. Please wait for instructions from the experimenter')
+message = visual.TextStim(disp, text='This is the end of session 2. Please wait for instructions from the experimenter')
 message.draw()  # Automatically draw every frame
 disp.flip()

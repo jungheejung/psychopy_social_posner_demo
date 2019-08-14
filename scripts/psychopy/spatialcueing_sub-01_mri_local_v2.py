@@ -8,7 +8,7 @@ import pandas as pd
 # parameters ___________________________________________________________________
 
 # 1) directory
-main_dir = "/Users/mristimulus/Desktop/SpecInt/SI01_git_0730"
+main_dir = "/Users/mristimulus/Desktop/SpecInt/SI.01_git"
 #main_dir = "/Users/h/Dropbox/Projects/SI.01_git"
 stimuli_dir = main_dir + os.sep + "stimuli"
 
@@ -25,7 +25,7 @@ background_color = GREY
 disp = visual.Window(pos=(0, 0), color=background_color, colorSpace="rgb255", units="norm", fullscr=True)
 # , fullscr=True
 # 4) fixation
-fixation_cross = visual.TextStim(win = disp, text = '+', color = [-1,-1,-1], height = 0.3)
+fixation_cross = visual.TextStim(win = disp, text = '+', color = [-1,-1,-1], height = 0.2)
 # 6) target
 target = visual.Circle(win = disp, units = 'pix', radius = 15, edges=128, lineColor=[-1,-1,-1], lineColorSpace='rgb', fillColor=[-1,-1,-1], fillColorSpace='rgb')
 target_positions = {'left': (int(disp.size[0] * -0.2), 0), 'right':( int(disp.size[0] * 0.2), 0)}
