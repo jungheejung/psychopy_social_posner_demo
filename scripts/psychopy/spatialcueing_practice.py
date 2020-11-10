@@ -13,10 +13,12 @@ import os
 import pandas as pd
 
 __author__ = "Heejung Jung"
-__copyright__ = "Copyright (c) 2020 jungheejung"
 __version__ = "1.0.1"
 __email__ = "heejung.jung@colorado.edu"
 __status__ = "Production"
+__modified__ = "YOUR NAME"
+__updated__ = "YOUR UPDATE DATE"
+
 
 """
 parameters
