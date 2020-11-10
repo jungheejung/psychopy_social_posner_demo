@@ -19,7 +19,7 @@ import pandas as pd
 # parameters ___________________________________________________________________
 
 # 1) directory
-main_dir = "/Users/h/Dropbox/projects_dropbox/SI.01_git_forcanlab"
+main_dir = "/Users/h/Dropbox/projects_dropbox/psychopy_social_posner_demo"
 stimuli_dir = main_dir + os.sep + "stimuli"
 
 # 2) color
