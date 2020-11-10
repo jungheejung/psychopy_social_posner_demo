@@ -1,4 +1,4 @@
-# SI.01
+# Social Posner Demo.01
 
 ## description
 This experiment is a modified posner cueing paradigm with social cues facilitating the target search.
