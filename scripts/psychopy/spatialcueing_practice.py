@@ -6,16 +6,17 @@ This is a practice test for the social posner cueing paradigm
 Please change the main_dir to your local directory
 """
 
-__author__ = "Heejung Jung"
-__version__ = "1.0.1"
-__email__ = "heejung.jung@colorado.edu"
-__status__ = "Production"
-
 from psychopy import core, gui, visual, event
 from random import choice
 import time
 import os
 import pandas as pd
+
+__author__ = "Heejung Jung"
+__copyright__ = "Copyright (c) 2020 jungheejung"
+__version__ = "1.0.1"
+__email__ = "heejung.jung@colorado.edu"
+__status__ = "Production"
 
 """
 parameters
